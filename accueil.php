@@ -14,24 +14,10 @@
 
     <body>
 
+            <?php
+            include_once('header.html');
+            ?>
             
-            <div id="wrapper" class="toggled">
-                    
-                <!-- Sidebar -->
-                <div id="sidebar-wrapper">
-                        
-                    <ul class="sidebar-nav">
-                        <li> <a href="accueil.html">Accueil</a> </li>
-                        <li> <a href="#">Histoires</a> </li>
-                        <li> <a href="#">Dessins</a> </li>
-                        <li> <a href="#">A propos</a> </li>
-                    </ul>
-                </div> <!-- /#sidebar-wrapper -->
-                <!-- Page Content -->
-                <span id="burger"class="  navbar-light "> 
-                        <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="navbar-toggler-icon"></a> 
-                        
-                </span>
                 <div id="page-content-wrapper">
                     <div class="container-fluid">
                         <h1>Accueil</h1>
@@ -44,7 +30,7 @@
                 </div> <!-- /#page-content-wrapper -->
                 <div id="btn_accueil">
                     <div class="btns">
-                        <img src="contents/Play.svg" height="75px" width="75px">
+                        <img src="contents/Play.png" height="75px" width="75px">
                         <h4>Histoires</h4>
 
                     </div>
@@ -54,7 +40,7 @@
     
                         </div>
                         <div class="btns">
-                                <img src="contents/info.png" height="75px" width="75px">
+                                <img src="contents/info.svg" height="75px" width="75px">
                                 <h4>A propos</h4>
         
                             </div>
