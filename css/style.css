@@ -2,6 +2,8 @@
 
 #btn_accueil{
     display: flex; 
+    flex-direction: row-reverse;
+
     margin: 0 33.3%;
 }
 
