@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Canvas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dessin.css">
   </head>
   <body>
   <?php 
@@ -25,7 +25,7 @@
       <button id="clear">Clear canvas</button>
     </div>
 
-    <canvas class="myCanvas">
+    <canvas name="myCanvas" id="myCanvas">
       <p>Add suitable fallback here.</p>
     </canvas>
     <form method="POST" name='form1'><input type="hidden" name ="my_hidden" id="my_hidden"></form>
