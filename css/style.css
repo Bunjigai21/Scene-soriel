@@ -1,13 +1,30 @@
 
 
-#menu-toggle{
-    background-color: pink;
+#btn_accueil{
+    display: flex; 
+    margin: 0 33.3%;
 }
+
+.btns > img {
+    background-color: green;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btns {
+    margin: 0 5%;
+}
+
 
 .sidebar-nav{
     text-align: center;
 }
 
+#burger{
+    display: flex;
+}
 
 
 
@@ -1230,11 +1247,7 @@ dl.row > dd + dt {
 
 
 
-/*!
- * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
- */
+
 
 body {
   overflow-x: hidden;
