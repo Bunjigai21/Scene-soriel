@@ -21,3 +21,6 @@ body {
      position: relative;
      bottom: 5px;
    }
+   #canvas{
+height:100%;
+   }

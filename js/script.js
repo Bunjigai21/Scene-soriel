@@ -22,8 +22,8 @@ function getMousePosition(e) {
 context.mozImageSmoothingEnabled = false;
 context.imageSmoothingEnabled = false;
 
-canvas.width = 1280;
-canvas.height = 720;
+canvas.width = (window.innerWidth);
+canvas.height = (window.innerHeight);
 canvas.style.width = '100%';
 canvas.style.height = '100%';
 
