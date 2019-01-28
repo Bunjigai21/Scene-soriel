@@ -24,10 +24,12 @@
       <button id="save">Save</button>
       <button id="clear">Clear canvas</button>
     </div>
-
-    <canvas name="myCanvas" id="myCanvas">
+<div id="canvas-container">
+<canvas name="myCanvas" id="myCanvas">
       <p>Add suitable fallback here.</p>
     </canvas>
+</div>
+    
     <form method="POST" name='form1'><input type="hidden" name ="my_hidden" id="my_hidden"></form>
     
     
