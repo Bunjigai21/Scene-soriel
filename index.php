@@ -28,17 +28,17 @@
                 </div> <!-- /#page-content-wrapper -->
                 <div id="btn_accueil">
                     <div class="btns">
-                        <img src="contents/Play.png" height="75px" width="75px">
+                        <a href="histoire.php" ><img src="contents/Play.png" height="75px" width="75px"></a>
                         <h4>Histoires</h4>
 
                     </div>
                     <div class="btns">
-                            <img src="contents/pen.png" height="75px" width="75px">
+                    <a href="dessin.php" ><img src="contents/pen.png" height="75px" width="75px"></a>
                             <h4>Dessins</h4>
     
                         </div>
                         <div class="btns">
-                                <img src="contents/info.svg" height="75px" width="75px">
+                        <a href="a-propos.php" ><img src="contents/info.svg" height="75px" width="75px"></a>
                                 <h4>A propos</h4>
         
                             </div>

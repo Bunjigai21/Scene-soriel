@@ -1,6 +1,6 @@
 
-#btn_burger{
-margin: 5% 0 0 5%;
+#burger{
+margin: 3% 0 0 3%;
 }
 
 #btn_accueil{
@@ -9,7 +9,7 @@ margin: 5% 0 0 5%;
     margin: 0 33.3%;
 }
 
-.btns > img {
+.btns > a > img {
     background-color: green;
     border-radius: 50%;
     display: block;
@@ -18,7 +18,18 @@ margin: 5% 0 0 5%;
 }
 
 .btns {
-    margin: 0 5%;
+    margin: 0 13%;
+}
+
+h1{
+    margin-bottom: 3rem !important;
+    margin-top: 1rem !important;
+    
+}
+
+.h4, h4{
+    
+    font-size: 1.1rem !important;
 }
 
 
@@ -36,7 +47,7 @@ margin: 5% 0 0 5%;
 @media screen and (max-width: 750px) {
     #btn_accueil{
         
-        margin-top: 25em;
+        margin-top: 5em;
     }
 
 
