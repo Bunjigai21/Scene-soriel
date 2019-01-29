@@ -6,9 +6,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
+       
                 
     </head>
 
@@ -50,15 +48,10 @@
             </div> <!-- /#wrapper -->
 
 
-            <script>
-            function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            }
-
-            function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            }
-            </script>
+           
+        <?php 
+        include_once("footer.html");
+        ?>
     </body>
 
 

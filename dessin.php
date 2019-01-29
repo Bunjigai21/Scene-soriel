@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Canvas</title>
-    <link rel="stylesheet" href="css/dessin.css">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="css/dessin.css">
   </head>
   <body>
-  <?php 
+
+  <?php
+  include_once('header.html'); 
     if(isset($_POST['my_hidden'])){
         $upload_dir = "images/saved/" ; //implement this function yourself
         $img = $_POST['my_hidden'];
@@ -33,7 +39,9 @@
     <form method="POST" name='form1'><input type="hidden" name ="my_hidden" id="my_hidden"></form>
     
     
-   <script src="js/script.js"></script>
-    
+   <script src="js/dessin.js"></script>
+   <?php 
+        include_once("footer.html");
+        ?>
   </body>
 </html>
