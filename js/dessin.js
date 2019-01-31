@@ -3,7 +3,7 @@ var canvascontainer = document.getElementById('canvas-container');
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
 var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
+//var output = document.querySelector('.output');
 var saveBtn = document.querySelector('#save');
 var gommeBtn = document.querySelector('#gomme');
 var gomme = false;
@@ -15,9 +15,9 @@ var colorPicker = document.querySelector('input[type="color"]');
  colorPicker.onclick = function(){
      gomme=false;
  }
-sizePicker.oninput = function() {
-    output.textContent = sizePicker.value;
-  }
+//sizePicker.oninput = function() {
+  //  output.textContent = sizePicker.value;
+ // }
 
 function getMousePosition(e) {
     var mouseX = e.offsetX * canvas.width / canvas.clientWidth | 0;

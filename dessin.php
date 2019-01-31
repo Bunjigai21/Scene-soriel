@@ -14,12 +14,13 @@
   <?php
   include_once('header.html'); 
     if(isset($_POST['my_hidden'])){
+        $nb=rand( 0 , 10000000 );
         $upload_dir = "images/saved/" ; //implement this function yourself
         $img = $_POST['my_hidden'];
         $img = str_replace('data:image/png;base64,', '', $img);
         $img = str_replace(' ', '+', $img);
         $data = base64_decode($img);
-        $file = $upload_dir."image_name.png";
+        $file = $upload_dir."image_name".$nb.".png";
         $success = file_put_contents($file, $data);
         header('Location: ');
     }
@@ -28,7 +29,7 @@
 <div id="canvas-container">
 <div class="toolbar">
       <input type="color" aria-label="select pen color">
-      <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
+      <input type="range" min="2" max="50" value="30" aria-label="select pen size">
       <button id="gomme">Gomme</button>
       <button id="save">Save</button>
       <button id="clear">Clear</button>

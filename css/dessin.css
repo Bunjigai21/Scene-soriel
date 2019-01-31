@@ -20,7 +20,9 @@ body {
   }
   input[type="range"] {
     width: 50%;
-    margin-left:1em;
+    margin: 0 auto;
+    display: block;
+   /* margin-left:1em;*/
   }
    .output {
      position: relative;
