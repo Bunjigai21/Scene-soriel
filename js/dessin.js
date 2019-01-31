@@ -5,14 +5,20 @@ var context = canvas.getContext('2d');
 var sizePicker = document.querySelector('input[type="range"]');
 var output = document.querySelector('.output');
 var saveBtn = document.querySelector('#save');
+var gommeBtn = document.querySelector('#gomme');
+var gomme = false;
 var radius = (document.getElementById('canvas-container').clientWidth + document.getElementById('canvas-container').clientHeight) / sizePicker.value;
 var dragging = false;
 context.fillStyle = 'rgba(255, 255, 255, 0)';
 context.strokeStyle = 'rgba(255, 255, 255, 0)';
 var colorPicker = document.querySelector('input[type="color"]');
+ colorPicker.onclick = function(){
+     gomme=false;
+ }
 sizePicker.oninput = function() {
     output.textContent = sizePicker.value;
   }
+
 function getMousePosition(e) {
     var mouseX = e.offsetX * canvas.width / canvas.clientWidth | 0;
     var mouseY = e.offsetY * canvas.height / canvas.clientHeight | 0;
@@ -24,12 +30,13 @@ context.imageSmoothingEnabled = false;
 
 canvas.width = (window.innerWidth);
 canvas.height = (window.innerHeight);
-canvas.style.width = '100%';
+canvas.style.width = '90%';
 canvas.style.height = '100%';
 
 /* CLEAR CANVAS */
 function clearCanvas() {
     context.clearRect(0, 0, canvas.width, canvas.height);
+    
 }
 
 clearButton.addEventListener('click', clearCanvas);
@@ -43,10 +50,23 @@ var putPoint = function (e) {
 
         context.lineTo(getMousePosition(e).x, getMousePosition(e).y);
         context.lineWidth = radius * 2;
-        context.strokeStyle = colorPicker.value;
+        if(gomme){
+            context.globalCompositeOperation = "destination-out";
+            context.strokeStyle = 'rgba(0, 0, 0, 1)';
+        }else{
+            context.globalCompositeOperation ="destination-over";
+            context.strokeStyle = colorPicker.value;
+        } 
         context.stroke();
         context.beginPath();
-        context.fillStyle = colorPicker.value;
+        if(gomme){
+            context.globalCompositeOperation = "destination-out";
+            context.fillStyle = 'rgba(0, 0, 0, 1)';
+        }else{
+            context.globalCompositeOperation ="destination-over";
+            context.fillStyle = colorPicker.value;
+        } 
+
         context.arc(getMousePosition(e).x, getMousePosition(e).y, radius, 0, Math.PI * 2);
         context.fill();
         context.beginPath();
@@ -113,4 +133,8 @@ saveBtn.onclick =function(){
     document.getElementById('my_hidden').value = canvas.toDataURL('image/png');
     document.forms["form1"].submit();
     
+    }
+
+    gommeBtn.onclick=function(){
+       gomme=true;
     }

@@ -24,16 +24,19 @@
         header('Location: ');
     }
 ?>
-    <div class="toolbar">
+    
+<div id="canvas-container">
+<div class="toolbar">
       <input type="color" aria-label="select pen color">
       <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
+      <button id="gomme">Gomme</button>
       <button id="save">Save</button>
-      <button id="clear">Clear canvas</button>
+      <button id="clear">Clear</button>
     </div>
-<div id="canvas-container">
 <canvas name="myCanvas" id="myCanvas">
       <p>Add suitable fallback here.</p>
     </canvas>
+    
 </div>
     
     <form method="POST" name='form1'><input type="hidden" name ="my_hidden" id="my_hidden"></form>

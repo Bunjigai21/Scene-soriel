@@ -8,19 +8,32 @@ body {
     height: 100px;
     background: #ccc;
     padding: 5px;
+    position : absolute;
+    top:5;
+    right:0;
+    z-index:10;
   }
   input[type="color"], button {
-    width: 90%;
+    width: 50%;
     margin: 0 auto;
     display: block;
   }
   input[type="range"] {
-    width: 70%;
+    width: 50%;
+    margin-left:1em;
   }
-   span {
+   .output {
      position: relative;
      bottom: 5px;
    }
-   #canvas{
+   #canvas{ 
 height:100%;
    }
+/* #clear{
+  float : left;
+  width:50%
+}
+#save{
+  float : right;
+  width:50%
+} */
