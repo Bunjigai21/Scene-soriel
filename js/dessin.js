@@ -6,6 +6,7 @@ var sizePicker = document.querySelector('input[type="range"]');
 //var output = document.querySelector('.output');
 var saveBtn = document.querySelector('#save');
 var gommeBtn = document.querySelector('#gomme');
+var jakobBtn = document.querySelector('#jakob');
 var gomme = false;
 var radius = (document.getElementById('canvas-container').clientWidth + document.getElementById('canvas-container').clientHeight) / sizePicker.value;
 var dragging = false;
@@ -54,7 +55,7 @@ var putPoint = function (e) {
             context.globalCompositeOperation = "destination-out";
             context.strokeStyle = 'rgba(0, 0, 0, 1)';
         }else{
-            context.globalCompositeOperation ="destination-over";
+            context.globalCompositeOperation ="source-over";
             context.strokeStyle = colorPicker.value;
         } 
         context.stroke();
@@ -63,7 +64,7 @@ var putPoint = function (e) {
             context.globalCompositeOperation = "destination-out";
             context.fillStyle = 'rgba(0, 0, 0, 1)';
         }else{
-            context.globalCompositeOperation ="destination-over";
+            context.globalCompositeOperation ="source-over";
             context.fillStyle = colorPicker.value;
         } 
 
@@ -118,17 +119,7 @@ x: touchEvent.touches[0].clientX - rect.left,
 y: touchEvent.touches[0].clientY - rect.top
 };
 }
-// canvas.addEventListener('touchstart', engage, false);
-//     // canvas.addEventListener('touchmove', function (e) {
-//     //   var touch = e.touches[0];
-//     //   var mouseEvent = new MouseEvent("mousemove", {
-//     //     clientX: touch.clientX,
-//     //     clientY: touch.clientY
-//     //   });
-//     //   canvas.dispatchEvent(mouseEvent);
-//     // }, false);
-// canvas.addEventListener('touchmove', putPoint, false);
-// canvas.addEventListener('touchend', disengage, false);
+
 saveBtn.onclick =function(){
     document.getElementById('my_hidden').value = canvas.toDataURL('image/png');
     document.forms["form1"].submit();
@@ -138,3 +129,10 @@ saveBtn.onclick =function(){
     gommeBtn.onclick=function(){
        gomme=true;
     }
+    jakobBtn.onclick=function(){
+        var img = new Image();   // Crée un nouvel élément img
+img.addEventListener('load', function() {
+   context.drawImage(img,0,0); 
+}, false);
+img.src = 'images/jakob.png';
+     }

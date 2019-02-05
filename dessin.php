@@ -14,13 +14,17 @@
   <?php
   include_once('header.html'); 
     if(isset($_POST['my_hidden'])){
-        $nb=rand( 0 , 10000000 );
-        $upload_dir = "images/saved/" ; //implement this function yourself
+        date_default_timezone_set('Europe/Paris');
+        $date= date("Y_m_d_H_i_s");
+        
+       // $nb=rand( 0 , 10000000 );
+        $upload_dir = "images/saved/" ;
         $img = $_POST['my_hidden'];
         $img = str_replace('data:image/png;base64,', '', $img);
         $img = str_replace(' ', '+', $img);
         $data = base64_decode($img);
-        $file = $upload_dir."image_name".$nb.".png";
+        // $file = $upload_dir."image_name".$nb.".png";
+        $file = $upload_dir.$date.".png";
         $success = file_put_contents($file, $data);
         header('Location: ');
     }
@@ -33,6 +37,7 @@
       <button id="gomme">Gomme</button>
       <button id="save">Save</button>
       <button id="clear">Clear</button>
+      <button id="jakob">Jakob</button>
     </div>
 <canvas name="myCanvas" id="myCanvas">
       <p>Add suitable fallback here.</p>

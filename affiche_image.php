@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Canvas</title>
-   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link rel="stylesheet" href="css/dessin.css">
-  </head>
-  <body>
-
   <?php
-  include_once('header.html'); 
 
     // Fonction de selection des fichiers suivant les extensions predeterminées avec $extensions
 function addphoto($dir,$extensions,$photos=array()){
@@ -45,11 +31,6 @@ $dossier_principal='images/saved';//nom du repertoire a lister
 $extensions = array('png'); // tableau des extensions d'images a selectionner: Rajouter ou enlever des extensions
 
 
-foreach(scandir_through($dossier_principal,$extensions) as $key=>$filename){echo '<img src="'.$filename.'"width=120px;></img>';}
+foreach(scandir_through($dossier_principal,$extensions) as $key=>$filename){echo '<img class="test" src="'.$filename.'"width=120px;></img>';}
 
 ?>   
-   <?php 
-        include_once("footer.html");
-        ?>
-  </body>
-</html>

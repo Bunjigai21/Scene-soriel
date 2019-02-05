@@ -15,7 +15,7 @@ body {
   }
   input[type="color"], button {
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
     display: block;
   }
   input[type="range"] {
@@ -30,6 +30,10 @@ body {
    }
    #canvas{ 
 height:100%;
+   }
+
+   button{
+     margin-top:20px;
    }
 /* #clear{
   float : left;
