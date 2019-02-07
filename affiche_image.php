@@ -1,5 +1,22 @@
   <?php
 
+require_once('bd.php');
+
+$sql = 'SELECT * FROM session WHERE DateFin>:currentdate ';
+        $req = $bd->prepare($sql);
+        date_default_timezone_set('Europe/Paris');
+        $currentDate=date("Y-m-d H:i:s");
+        $req->bindParam(':currentdate', $currentDate );
+        $req->execute();    
+        $session= $req-> fetch();
+if(isset($session['Id'])&& $session!=""){
+    $dossier_principal='images/saved/'.$session['Id'].'/';//nom du repertoire a lister
+
+}else{
+    $dossier_principal='images/saved/non/';//nom du repertoire a lister
+
+}
+$extensions = array('png'); // tableau des extensions d'images a selectionner: Rajouter ou enlever des extensions
     // Fonction de selection des fichiers suivant les extensions predeterminées avec $extensions
 function addphoto($dir,$extensions,$photos=array()){
 	
@@ -26,11 +43,8 @@ function scandir_through($dir,$extensions,$photos=array()){
     return $photos;
 }
 
-/*VARIABLES A ADAPTER A TON CAS*/
-$dossier_principal='images/saved';//nom du repertoire a lister
-$extensions = array('png'); // tableau des extensions d'images a selectionner: Rajouter ou enlever des extensions
 
 
-foreach(scandir_through($dossier_principal,$extensions) as $key=>$filename){echo '<img class="test" src="'.$filename.'"width=120px;></img>';}
+foreach(scandir_through($dossier_principal,$extensions) as $key=>$filename){echo '<img class="test" src="'.$filename.'"></img>';}
 
 ?>   

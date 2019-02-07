@@ -5,4 +5,10 @@
     top:156px;
 	left: 130px;
 	display: block; */
+	width:200px;
+}
+#testback{
+	background-image: url('../contents/testback.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }

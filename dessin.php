@@ -12,22 +12,63 @@
   <body>
 
   <?php
+
   include_once('header.html'); 
     if(isset($_POST['my_hidden'])){
+        require_once('bd.php');
+        $sql = 'SELECT * FROM session WHERE DateFin>:currentdate ';
+        $req = $bd->prepare($sql);
         date_default_timezone_set('Europe/Paris');
-        $date= date("Y_m_d_H_i_s");
+        $currentDate=date("Y-m-d H:i:s");
+        $req->bindParam(':currentdate', $currentDate );
+        $req->execute();    
+        $session =$req->fetch();
+        if(isset($session["Id"]) && $session["Id"]!=''){
+            $date= date("Y_m_d_H_i_s");
+           // $nb=rand( 0 , 10000000 );
+           $upload_dir = "images/saved/".$session["Id"]."/" ;
+           if( !is_dir ( $upload_dir) ){
+             mkdir($upload_dir);
+           }
         
-       // $nb=rand( 0 , 10000000 );
-        $upload_dir = "images/saved/" ;
-        $img = $_POST['my_hidden'];
-        $img = str_replace('data:image/png;base64,', '', $img);
-        $img = str_replace(' ', '+', $img);
-        $data = base64_decode($img);
-        // $file = $upload_dir."image_name".$nb.".png";
-        $file = $upload_dir.$date.".png";
-        $success = file_put_contents($file, $data);
-        header('Location: ');
-    }
+            $img = $_POST['my_hidden'];
+            $img = str_replace('data:image/png;base64,', '', $img);
+            $img = str_replace(' ', '+', $img);
+            $data = base64_decode($img);
+            // $file = $upload_dir."image_name".$nb.".png";
+            $file = $upload_dir.$date.".png";
+            $success = file_put_contents($file, $data);
+            header('Location:  dessin.php');
+        }else{            
+            $sql = 'INSERT INTO session(DateDebut,ThemeId, DateFin) VALUES(:currentdate ,1, :dateend) ';
+            $req = $bd->prepare($sql);
+            $req->bindParam(':currentdate', $currentDate);
+            $dateEnd=date("Y-m-d H:i:s", mktime( date("H")+1));
+            $req->bindParam(':dateend',$dateEnd);
+            $req->execute(); 
+            $sql = 'SELECT * FROM session WHERE DateFin>:currentdate ';
+            $req = $bd->prepare($sql);
+            $req->bindParam(':currentdate', $currentDate);
+            $req->execute();    
+            $session =$req->fetch();
+            $date= date("Y_m_d_H_i_s");
+           // $nb=rand( 0 , 10000000 );
+            $upload_dir = "images/saved/".$session["Id"]."/" ;
+            if( !is_dir ( $upload_dir) ){
+                mkdir($upload_dir);
+              }
+            $img = $_POST['my_hidden'];
+            $img = str_replace('data:image/png;base64,', '', $img);
+            $img = str_replace(' ', '+', $img);
+            $data = base64_decode($img);
+            // $file = $upload_dir."image_name".$nb.".png";
+            $file = $upload_dir.$date.".png";
+            $success = file_put_contents($file, $data);
+            header('Location: dessin.php');
+        }
+         }
+        
+        
 ?>
     
 <div id="canvas-container">

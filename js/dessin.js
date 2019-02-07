@@ -13,9 +13,9 @@ var dragging = false;
 context.fillStyle = 'rgba(255, 255, 255, 0)';
 context.strokeStyle = 'rgba(255, 255, 255, 0)';
 var colorPicker = document.querySelector('input[type="color"]');
- colorPicker.onclick = function(){
-     gomme=false;
- }
+colorPicker.onclick = function(){
+    gomme=false;
+}
 //sizePicker.oninput = function() {
   //  output.textContent = sizePicker.value;
  // }
@@ -91,48 +91,50 @@ document.addEventListener('mouseup', disengage);
 canvas.addEventListener('contextmenu', disengage);
 canvas.addEventListener("touchstart", function (e) {
     mousePos = getTouchPos(canvas, e);
-var touch = e.touches[0];
-var mouseEvent = new MouseEvent("mousedown", {
-clientX: touch.clientX,
-clientY: touch.clientY
-});
+    var touch = e.touches[0];
+    var mouseEvent = new MouseEvent("mousedown", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+    });
 canvas.dispatchEvent(mouseEvent);
 }, false);
 canvas.addEventListener("touchend", function (e) {
-var mouseEvent = new MouseEvent("mouseup", {});
-canvas.dispatchEvent(mouseEvent);
+    var mouseEvent = new MouseEvent("mouseup", {});
+    canvas.dispatchEvent(mouseEvent);
 }, false);
 canvas.addEventListener("touchmove", function (e) {
-var touch = e.touches[0];
-var mouseEvent = new MouseEvent("mousemove", {
-clientX: touch.clientX,
-clientY: touch.clientY
-});
-canvas.dispatchEvent(mouseEvent);
+    var touch = e.touches[0];
+        var mouseEvent = new MouseEvent("mousemove", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+    });
+    canvas.dispatchEvent(mouseEvent);
 }, false);
 
 // Get the position of a touch relative to the canvas
 function getTouchPos(canvasDom, touchEvent) {
-var rect = canvasDom.getBoundingClientRect();
-return {
-x: touchEvent.touches[0].clientX - rect.left,
-y: touchEvent.touches[0].clientY - rect.top
-};
+    var rect = canvasDom.getBoundingClientRect();
+    return {
+        x: touchEvent.touches[0].clientX - rect.left,
+        y: touchEvent.touches[0].clientY - rect.top
+    };
 }
 
 saveBtn.onclick =function(){
     document.getElementById('my_hidden').value = canvas.toDataURL('image/png');
     document.forms["form1"].submit();
     
-    }
+}
 
-    gommeBtn.onclick=function(){
-       gomme=true;
-    }
-    jakobBtn.onclick=function(){
-        var img = new Image();   // Crée un nouvel élément img
-img.addEventListener('load', function() {
-   context.drawImage(img,0,0); 
-}, false);
-img.src = 'images/jakob.png';
-     }
+gommeBtn.onclick=function(){
+    gomme=true;
+}
+jakobBtn.onclick=function(){
+    gomme=false;
+    context.globalCompositeOperation ="source-over";
+    var img = new Image();   
+    img.addEventListener('load', function() {
+        context.drawImage(img,0,0); 
+    }, false);
+    img.src = 'images/jakob.png';
+}
