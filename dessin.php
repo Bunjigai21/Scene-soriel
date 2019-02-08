@@ -73,8 +73,10 @@
     
 <div id="canvas-container">
 <div class="toolbar">
-      <input type="color" aria-label="select pen color">
-      <input type="range" min="2" max="50" value="30" aria-label="select pen size">
+<input class="form-control-range" id="formControlRange" type="range" min="2" max="50" value="20" aria-label="select pen size">
+
+      <input class="form-control" type="color" aria-label="select pen color">
+     
       <button id="gomme">Gomme</button>
       <button id="save">Save</button>
       <button id="clear">Clear</button>

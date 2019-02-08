@@ -1,3 +1,12 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
+--
+-- Client :  127.0.0.1
+-- Généré le :  Ven 08 Février 2019 à 10:07
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -44,8 +53,9 @@ CREATE TABLE `dessin` (
 
 CREATE TABLE `session` (
   `Id` int(11) NOT NULL,
-  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ThemeId` int(11) NOT NULL
+  `DateDebut` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ThemeId` int(11) NOT NULL,
+  `DateFin` timestamp NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -88,6 +98,15 @@ ALTER TABLE `session`
 ALTER TABLE `theme`
   ADD PRIMARY KEY (`Id`);
 
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `session`
+--
+ALTER TABLE `session`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

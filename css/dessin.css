@@ -13,15 +13,22 @@ body {
     right:0;
     z-index:10;
   }
+  .slider-wrapper {
+  display: inline-block;
+  width: 20px;
+  height: 150px;
+  padding: 0;
+}
   input[type="color"], button {
     width: 50%;
-    margin: 20px auto;
+    margin: 80px auto;
     display: block;
   }
   input[type="range"] {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     display: block;
+    transform: rotate(-90deg);
    /* margin-left:1em;*/
   }
    .output {
@@ -43,3 +50,4 @@ height:100%;
   float : right;
   width:50%
 } */
+
