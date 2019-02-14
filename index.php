@@ -10,7 +10,7 @@
                 
     </head>
 
-    <body>
+    <body id="Accueil">
 
             <?php
             include_once('header.html');
@@ -18,30 +18,16 @@
             
                 <div id="page-content-wrapper">
                     <div class="container-fluid">
-                        <h1>Accueil</h1>
-                        <p>ScèneSoriel est un projet qui permet au public du théatre qui permet au public du théatre miberté de vivre 
-                            une expérience unique se basant sur les sens mais se voulant également être novateur, instructif, et enrichissant 
-                            pour le spéctateur. En effet, le théatre est un lieu où se mêlent sensations et émotions. Nous avons donc 
-                            souhaité ajouter notre sensibilité et apporter d'autres sensations 
-                            et émotions que celles qui peuvent être ressenties durant les  spectacles proposés par le théatre Liberté</p>
+                        <h1>SCENESORIEL</h1>
+                        <p class="p-accueil">Récit digital, immersif et interactif à découvrir dans la salle Fanny Ardant</p>
+                        <p class="p-accueil">L'installation est ouverte au public du mardi au samedi de 11h00 à 23h00</p>
+                        <p class="p-accueil">Découvrez l'histoire de Jakob pour participer au récit</p>
                     </div>
                 </div> <!-- /#page-content-wrapper -->
                 <div id="btn_accueil">
                     <div class="btns">
-                        <a href="histoire.php" ><img src="contents/Play.png" height="75px" width="75px"></a>
-                        <h4>Histoires</h4>
-
+                        <a href="histoire.php" ><button type="button" href="histoire.php"  class="btn btn-outline-light">L'HISTOIRE</button></a>
                     </div>
-                    <div class="btns">
-                    <a href="dessin.php" ><img src="contents/pen.png" height="75px" width="75px"></a>
-                            <h4>Dessins</h4>
-    
-                        </div>
-                        <div class="btns">
-                        <a href="a-propos.php" ><img src="contents/info.svg" height="75px" width="75px"></a>
-                                <h4>A propos</h4>
-        
-                            </div>
                         
 
                 </div>

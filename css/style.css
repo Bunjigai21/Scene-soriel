@@ -1,7 +1,32 @@
 
+@font-face {
+    font-family: Aileron;
+    src: url("../font/Ailerons-Typeface.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Leelawad;
+    src: url("../font/leelawad.ttf") format("truetype");
+}
+
 #burger{
 margin: 3% 0 0 3%;
 }
+
+a > img {
+    margin-left: 5px;
+}
+
+#mySidenav>a:first-child{
+    margin-top:30%;
+}
+
+#accueil, #histoire {
+    background-color: #681BAE;
+    padding: 0.5em;
+    font-family: Leelawad;
+}
+
 
 #btn_accueil{
     display: flex; 
@@ -21,9 +46,24 @@ margin: 3% 0 0 3%;
     margin: 0 13%;
 }
 
+p {
+    color: white !important;
+}
+
+.p-accueil{
+    text-align: center;
+    padding: 0 13% 0 13%;
+    font-family: Leelawad;
+    
+}
+
 h1{
-    margin-bottom: 3rem !important;
-    margin-top: 1rem !important;
+   margin-bottom: 3rem !important;
+    margin-top: 3rem !important;
+    text-align: center;
+    color: white !important;
+    font-family:'Aileron' !important;
+    font-size: 2.2em !important;
     
 }
 
@@ -68,19 +108,20 @@ h1{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-image:linear-gradient(#4373C4, #2FE36A);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
   }
   
   .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
+    text-align: center;
   }
   
   .sidenav a:hover {
