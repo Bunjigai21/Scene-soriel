@@ -12,6 +12,9 @@
 
     <body id="Accueil">
 
+        <div class="body-head">ACCUEIL</div>
+
+
             <?php
             include_once('header.html');
             ?>
@@ -19,6 +22,7 @@
                 <div id="page-content-wrapper">
                     <div class="container-fluid">
                         <h1>SCENESORIEL</h1>
+                        <img id="line-accueil"src="contents/line.svg" height="90" width="30">
                         <p class="p-accueil">Récit digital, immersif et interactif à découvrir dans la salle Fanny Ardant</p>
                         <p class="p-accueil">L'installation est ouverte au public du mardi au samedi de 11h00 à 23h00</p>
                         <p class="p-accueil">Découvrez l'histoire de Jakob pour participer au récit</p>
