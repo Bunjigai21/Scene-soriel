@@ -1,14 +1,35 @@
 .test {
-	/* position:absolute;
-	width: 100px;
+	position:relative;
+	/*width: 100px;
 	height:auto;
     top:156px;
-	left: 130px;
+	left: 130px; 
 	display: block; */
 	width:200px;
+	height : 200px;
+}
+#premier{
+	display: flex;
+	flex-wrap: wrap;
 }
 #testback{
-	background-image: url('../contents/testback.jpg');
+	/*background-image: url('../contents/testback.jpg');
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 100%;*/
 }
+ #myVideo {
+	 
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+  } 
+  .content {
+	/*yposition: fixed;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	width: 100%;
+	padding: 20px;*/
+  }

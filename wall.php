@@ -14,7 +14,9 @@
     </head>
 
 <body id='testback' onLoad="random_position()">
-
+<video autoplay muted loop id="myVideo">
+  <source src="images/saved/Scène_1_sans_son.mp4" type="video/mp4"><!-- La vidéo est pas sur le git, trop lourd sinon-->
+</video>
 <div  id="premier">
  </div>
 </body>
