@@ -7,13 +7,14 @@ var sizePicker = document.querySelector('input[type="range"]');
 var saveBtn = document.querySelector('#save');
 var gommeBtn = document.querySelector('#gomme');
 var jakobBtn = document.querySelector('#jakob');
+var drawBtn = document.querySelector('#draw');
 var gomme = false;
 var radius = (document.getElementById('canvas-container').clientWidth + document.getElementById('canvas-container').clientHeight) / sizePicker.value;
 var dragging = false;
 context.fillStyle = 'rgba(255, 255, 255, 0)';
 context.strokeStyle = 'rgba(255, 255, 255, 0)';
 var colorPicker = document.querySelector('input[type="color"]');
-colorPicker.onclick = function(){
+drawBtn.onclick = function(){
     gomme=false;
 }
 //sizePicker.oninput = function() {
@@ -138,3 +139,4 @@ jakobBtn.onclick=function(){
     }, false);
     img.src = 'images/jakob.png';
 }
+
