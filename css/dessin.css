@@ -1,4 +1,4 @@
-body {
+/*body {
      margin: 0;
     overflow: hidden;
     background: #ccc; 
@@ -7,7 +7,7 @@ body {
     background-image: linear-gradient(#3535c5,#000000 );
     background-repeat: no-repeat;
    background-size: 100%; 
-  }
+  }*/
 
   .toolbar {
     width: 50px;
