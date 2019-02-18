@@ -9,9 +9,24 @@
     src: url("../font/leelawad.ttf") format("truetype");
 }
 
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 #burger{
     margin: 3% 0 0 3%;
-    width: 8%;
+    /*width: 8%;
+    filter:invert(100%);*/
+    background-color: #5FC9A2;
+    border-radius: 100%;
+    background-image: url("../contents/burger.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    width: 40px;
+    height: 40px;
+    border:white 2px solid;
 }
 
 #line-accueil{
@@ -19,6 +34,10 @@
     margin: 0 33.3% 0 33.3%;
     width:33%;
     filter:invert(100%);
+}
+
+#cont-burger{
+    
 }
 
 .body-head{
@@ -29,7 +48,7 @@
     margin-top: -3%;
     color: white;
     text-align: center;
-    padding: 0.8em 0 1em 0;
+    padding: 1em 0 1em 0;
 }
 
 a > img {
