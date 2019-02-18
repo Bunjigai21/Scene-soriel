@@ -20,9 +20,9 @@
 
                 <div id="page-content-wrapper">
                     <div class="container-fluid">
-                        <h1>Histoire</h1>
+                        
                         <p class="p-histoire"> Il était une fois, sur la Côte d’Azur, dans le sud-est de la France, une jeune
-                            et joyeuse famille composée de Jakob, Zohra et leur fi lle Alaïa.</p>
+                            et joyeuse famille composée de Jakob, Zohra et leur fille Alaïa.</p>
 
                         <p class="p-histoire">À 37 ans, Jakob est un bel et grand homme brun, aux yeux d’un vert émeraude
                             captivant. Créatif et passionné par les travaux manuels, il exerce le métier de

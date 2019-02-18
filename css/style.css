@@ -54,6 +54,18 @@ a > img {
     font-family:'Aileron' !important;
 }
 
+#propos{
+    background-image:  url("../contents/fond.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Leelawad;
+}
+
+.p-propos {
+    margin: 0 5% 0 5%;
+}
+
 #mySidenav>a:nth-child(0n+2){
     margin-top:35%;
 }
@@ -95,6 +107,14 @@ p {
     color: white !important;
 }
 
+p:last-child{
+    margin-bottom: 15%;
+}
+
+.p-histoire{
+    margin:5% 5% 0 5%;
+}
+
 .p-accueil{
     text-align: center;
     padding: 0 13% 0 13%;
@@ -110,6 +130,14 @@ h1{
     font-family:'Aileron' !important;
     font-size: 2.2em !important;
     
+}
+
+h3{
+    margin: 0.1rem 20% 0 20%!important;
+    text-align: center;
+    color: white !important;
+    font-family:'Aileron' !important;
+    font-size: 1.2em !important;
 }
 
 .h4, h4{
