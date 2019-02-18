@@ -12,6 +12,8 @@
 
     <body id="histoire">
 
+        <div class="body-head">HISTOIRE</div>
+
             <?php
             include_once('header.html');
             ?>
