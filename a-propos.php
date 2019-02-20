@@ -22,7 +22,7 @@
                 <div class="container-fluid">
                     <h1>SCENESORIEL</h1>
                     <h3>ON VOUS EXPLIQUE NOTRE DEMARCHE</h3>
-                    <img id="line-accueil"src="contents/line.svg" height="90" width="30">
+                    <div class="bande"></div>
                     <p class="p-propos"> Formé à partir des mots "scène" et "sensoriel".Il évoque le mot "sensation" par consonance mais aussi par sa 
                     signification. </p>
                     <p class="p-propos">C'est notre projet qui permet au public de vivre une expérience unique se basant sur les sens mais se voulant également être novateur, instructif

@@ -14,9 +14,29 @@ body{
     margin: 0 !important;
 }
 
+#mySidenav > a > span {
+    pointer-events: none;
+}
+
+.bande{
+    background-color: white;
+    height: 1.5px;
+    width: 50%;
+    margin: 0 25% 0 25%;
+}
+
+
 #reseau-soc {
-    margin-top: 90%;
+    margin: 15.25em 0 0 39%;
     display: flex;
+}
+
+#reseau-soc>a:first-child{
+    margin-top: -1.5%;
+}
+
+#reseau-soc > a{
+    padding: 3px;
 }
 
 .img-invert{
@@ -85,6 +105,12 @@ a > img {
 
 #mySidenav>a:nth-child(0n+2){
     margin-top:35%;
+}
+
+.container-fluid > .bande {
+    margin: 12% 40%;
+    width: 20%;
+    height: 3px;
 }
 
 #accueil, #histoire{
@@ -203,9 +229,9 @@ h3{
   }
   
   .sidenav a {
-    padding: 8px 8px 8px 8px;
+    padding: 8px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     color: white;
     display: block;
     transition: 0.3s;
