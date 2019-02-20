@@ -126,6 +126,7 @@ a > img {
     background-image: linear-gradient(#3535c5,#000000 );
     padding-top: 0.5em;
     font-family: Leelawad;
+    overflow: hidden;
 }
 
 #btn_accueil{

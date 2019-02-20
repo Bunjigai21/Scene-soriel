@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Canvas</title>
+    <title>Dessin</title>
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -12,7 +12,9 @@
   </head>
   <body id="dessin">
 
-<div class="body-head">DESSINER</div>
+<div class="body-head">
+  DESSINER
+</div>
 
   <?php
 
@@ -76,15 +78,14 @@
 
 
 <div id="canvas-container">
-<div class="toolbar">
-
-     
-      <a data-toggle="modal" data-target="#myModal" id="draw"><img src="contents/pen.png" height="30" width="30"></a>
-      <a id="gomme"><img src="contents/retour.png" height="30" width="30"></a>
-      <a id="save">Save</a>
-      <a id="clear"><img src="contents/retour.png" height="30" width="30"></a>
-      <a id="jakob"><img src="contents/forme.png" height="30" width="30"></a>
-    </div>
+  <div class="toolbar">
+    <a data-toggle="modal" data-target="#myModal" id="draw"><img src="contents/pen.png" height="30" width="30"></a>
+    <a id="gomme"><img src="contents/retour.png" height="30" width="30"></a>
+    <a id="save">Save</a>
+    <a id="clear"><img src="contents/retour.png" height="30" width="30"></a>
+    <a id="jakob"><img src="contents/forme.png" height="30" width="30"></a>
+    <a id="info"><img src="contents/info.png" height="30" width="30"></a>
+  </div>
 <canvas name="myCanvas" id="myCanvas">
       
     </canvas>
@@ -104,15 +105,13 @@
         <h4 class="modal-title">Pinceau</h4>
       </div>
       <div class="modal-body">
-      <input class="form-control-range" id="formControlRange" type="range" min="2" max="50" value="20" aria-label="select pen size">
-
-<input class="form-control" type="color" aria-label="select pen color">
+        <input class="form-control-range" id="formControlRange" type="range" min="2" max="50" value="20" aria-label="select pen size">
+        <input class="form-control" type="color" aria-label="select pen color">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-
   </div>
 </div>
    <script src="js/dessin.js"></script>
