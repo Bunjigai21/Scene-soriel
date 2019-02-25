@@ -103,6 +103,13 @@ a > img {
     margin: 65% 4% 0 4%;
 }
 
+#merci {
+    background-image:  url("../contents/fond-merci.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .p-propos {
     margin: 0 5% 0 5%;
 }
@@ -125,7 +132,7 @@ a > img {
     background-position: center;
     background-size: cover;
 }
-#dessin, #merci {
+#dessin {
     background-image: linear-gradient(#3535c5,#000000 );
     padding-top: 0.5em;
     font-family: Leelawad;
