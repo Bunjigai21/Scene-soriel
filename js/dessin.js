@@ -33,7 +33,7 @@ context.imageSmoothingEnabled = false;
 canvas.width = (window.innerWidth);
 canvas.height = (window.innerHeight);
 canvas.style.width = '90%';
-canvas.style.height = '100%';
+canvas.style.height = '90%';
 
 /* CLEAR CANVAS */
 function clearCanvas() {

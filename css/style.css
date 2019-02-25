@@ -127,6 +127,8 @@ a > img {
     padding-top: 0.5em;
     font-family: Leelawad;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #btn_accueil{
