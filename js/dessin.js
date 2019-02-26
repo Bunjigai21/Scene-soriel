@@ -4,7 +4,7 @@ var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
 var sizePicker = document.querySelector('input[type="range"]');
 //var output = document.querySelector('.output');
-var saveBtn = document.querySelector('#save');
+var saveBtn = document.querySelector('#btn-save');
 var gommeBtn = document.querySelector('#gomme');
 var jakobBtn = document.querySelector('#jakob');
 var drawBtn = document.querySelector('#draw');
@@ -13,27 +13,26 @@ var radius = (document.getElementById('canvas-container').clientWidth + document
 var dragging = false;
 context.fillStyle = 'rgba(255, 255, 255, 0)';
 context.strokeStyle = 'rgba(255, 255, 255, 0)';
+
+
 var colorPicker = document.querySelector('input[type="color"]');
 drawBtn.onclick = function(){
     gomme=false;
 }
+
 //sizePicker.oninput = function() {
   //  output.textContent = sizePicker.value;
  // }
 
-function getMousePosition(e) {
-    var mouseX = e.offsetX * canvas.width / canvas.clientWidth | 0;
-    var mouseY = e.offsetY * canvas.height / canvas.clientHeight | 0;
-    return {x: mouseX, y: mouseY};
-}
+
 
 context.mozImageSmoothingEnabled = false;
 context.imageSmoothingEnabled = false;
 
 canvas.width = (window.innerWidth);
 canvas.height = (window.innerHeight);
-canvas.style.width = '90%';
-canvas.style.height = '90%';
+canvas.style.width = '100%';
+canvas.style.height = '100%';
 
 /* CLEAR CANVAS */
 function clearCanvas() {
@@ -110,7 +109,87 @@ canvas.addEventListener("touchmove", function (e) {
         clientY: touch.clientY
     });
     canvas.dispatchEvent(mouseEvent);
-}, false);
+ }, false);
+
+
+
+
+
+// canvas.addEventListener("touchstart", handleStart, false);
+// canvas.addEventListener("touchend", handleEnd, false);
+// canvas.addEventListener("touchcancel", handleCancel, false);
+// canvas.addEventListener("touchleave", handleLeave, false);
+// canvas.addEventListener("touchmove", handleMove, false);
+
+// function handleStart(evt) {
+//     evt.preventDefault();
+//     var el = document.getElementsByTagName("canvas")[0];
+//     var ctx = el.getContext("2d");
+//     var touches = evt.changedTouches;
+          
+//     for (var i=0; i<touches.length; i++) {
+//       ongoingTouches.push(touches[i]);
+//       var color = colorForTouch(touches[i]);
+//       ctx.fillStyle = color;
+//       ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
+//     }
+//   }
+//   function handleMove(evt) {
+//     evt.preventDefault();
+//     var el = document.getElementsByTagName("canvas")[0];
+//     var ctx = el.getContext("2d");
+//     var touches = evt.changedTouches;
+    
+//     ctx.lineWidth = 4;
+          
+//     for (var i=0; i<touches.length; i++) {
+//       var color = colorForTouch(touches[i]);
+//       var idx = ongoingTouchIndexById(touches[i].identifier);
+  
+//       ctx.fillStyle = color;
+//       ctx.beginPath();
+//       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
+//       ctx.lineTo(touches[i].pageX, touches[i].pageY);
+//       ctx.closePath();
+//       ctx.stroke();
+//       ongoingTouches.splice(idx, 1, touches[i]);  // mettre à jour la liste des touchers
+//     }
+//   }
+//   function handleEnd(evt) {
+//     evt.preventDefault();
+//     var el = document.getElementsByTagName("canvas")[0];
+//     var ctx = el.getContext("2d");
+//     var touches = evt.changedTouches;
+    
+//     ctx.lineWidth = 4;
+          
+//     for (var i=0; i<touches.length; i++) {
+//       var color = colorForTouch(touches[i]);
+//       var idx = ongoingTouchIndexById(touches[i].identifier);
+      
+//       ctx.fillStyle = color;
+//       ctx.beginPath();
+//       ctx.moveTo(ongoingTouches[i].pageX, ongoingTouches[i].pageY);
+//       ctx.lineTo(touches[i].pageX, touches[i].pageY);
+//       ongoingTouches.splice(i, 1);  // On enlève le point
+//     }
+//   }
+//   function handleCancel(evt) {
+//     evt.preventDefault();
+//     var touches = evt.changedTouches;
+    
+//     for (var i=0; i<touches.length; i++) {
+//       ongoingTouches.splice(i, 1);  // on retire le point
+//     }
+//   }
+
+
+
+function getMousePosition(e) {
+    var mouseX = e.offsetX * canvas.width / canvas.clientWidth | 0;
+    var mouseY = e.offsetY * canvas.height / canvas.clientHeight | 0;
+    return {x: mouseX, y: mouseY};
+}
 
 // Get the position of a touch relative to the canvas
 function getTouchPos(canvasDom, touchEvent) {
@@ -135,7 +214,7 @@ jakobBtn.onclick=function(){
     context.globalCompositeOperation ="source-over";
     var img = new Image();   
     img.addEventListener('load', function() {
-        context.drawImage(img,0,0); 
+        context.drawImage(img,5,5); 
     }, false);
     img.src = 'images/jakob.png';
 }

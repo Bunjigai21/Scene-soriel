@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, shrink-to-fit=no">
         <title>Dessin</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -12,7 +12,7 @@
     </head>
 
     <body id="dessin">
-
+    
         <div class="body-head">DESSINER</div>
 
 
@@ -52,7 +52,7 @@
                     // $file = $upload_dir."image_name".$nb.".png";
                     $file = $upload_dir.$date.".png";
                     $success = file_put_contents($file, $data);
-                    header('Location:  dessin.php');
+                    header('Location:  merci.php');
                 }else{            
                     $sql = 'INSERT INTO session(DateDebut,ThemeId, DateFin) VALUES(:currentdate ,1, :dateend) ';
                     $req = $bd->prepare($sql);
@@ -78,13 +78,13 @@
                     // $file = $upload_dir."image_name".$nb.".png";
                     $file = $upload_dir.$date.".png";
                     $success = file_put_contents($file, $data);
-                    header('Location: dessin.php');
+                    header('Location: merci.php');
                 }
                  }
             ?>
               <!-- Modal -->
               <form method="POST" name='form1'><input type="hidden" name ="my_hidden" id="my_hidden"></form>
-  <div id="myModal" class="modal fade" role="dialog">
+  <div id="myModal" class="modal fade" role="dialog" >
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -93,7 +93,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <input class="form-control-range" id="formControlRange" type="range" min="2" max="50" value="20" aria-label="select pen size">
+        <input class="form-control-range" id="formControlRange" type="range" min="2" max="50" value="10" aria-label="select pen size">
         <input class="form-control" type="color" aria-label="select pen color"  value="#FFFFFF">
       </div>
       <div class="modal-footer">
@@ -108,8 +108,8 @@
                     <div id="canvas-container">
                     <div class="toolbar">
                         <a data-toggle="modal" data-target="#myModal" id="draw"><img src="contents/pen.png" height="30" width="30"></a>
-                        <a id="gomme"><img src="contents/retour.png" height="30" width="30"></a>
-                        <a id="save">Save</a>
+                        <a id="gomme"><img src="contents/gomme.png" height="30" width="30"></a>
+                       
                         <a id="clear"><img src="contents/retour.png" height="30" width="30"></a>
                         <a id="jakob"><img src="contents/forme.png" height="30" width="30"></a>
                         <a id="info"><img src="contents/info.png" height="30" width="30"></a>
@@ -121,11 +121,16 @@
     
                    
                     </div>
+                    
                 </div> <!-- /#page-content-wrapper -->
+                <div id="btn-save">
+                    <a id="save">ENVOYER MON DESSIN</a>
+                    </div>
             </div> <!-- /#wrapper -->
  
 
             <script src="js/dessin.js"></script>
+
         <?php 
         include_once("footer.html");
         ?>
