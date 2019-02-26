@@ -12,7 +12,7 @@
 
     <body id="histoire">
 
-        <div class="body-head">HISTOIRE</div>
+        <div class="body-head">L'HISTOIRE</div>
 
             <?php
             include_once('header.html');

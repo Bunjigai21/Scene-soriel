@@ -27,8 +27,10 @@ body{
 
 
 #reseau-soc {
-    margin: 15.25em 0 0 39%;
+    margin-left:39%;
     display: flex;
+    position: absolute;
+    bottom: 0;
 }
 
 #reseau-soc>a:first-child{
